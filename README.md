@@ -5,7 +5,7 @@
 2. Extract the downloaded ZIP and open it
 3. Navigate to your copy the **LogDLL.dll** file from the extracted folder to your **@Dayz_Epoch_Server** folder in your server root
 4. Use the following format to log.
-`"LogDLL" callExtension "FOLDERNAME/FULLPATH\~FILENAME\~LOGENTRY";`
+`"LogDLL" callExtension "FOLDERNAME/FULLPATH~FILENAME~LOGENTRY";`
 
 Example 1:
 `"LogDLL" callExtension "Logs~Coins~This is a test";`
