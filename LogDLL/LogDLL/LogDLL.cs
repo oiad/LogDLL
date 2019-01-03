@@ -90,7 +90,7 @@ namespace LogDLL
 
             //Construct filename
             string curDateString = DateTime.Now.ToString("dd-MM-yyyy");
-            string filenameBuilt = fileName + "_" + curDateString + ".log";
+            string filenameBuilt = fileName + "_" + curDateString + ".txt";
 
             //Get log
             string message = originalInput.Substring(secondTilda + 1);
@@ -104,7 +104,7 @@ namespace LogDLL
             using (StreamWriter sw = File.AppendText(path + filenameBuilt))
             {
                 string curTimeString = DateTime.Now.ToString("HH:mm:ss");
-                sw.WriteLine(curTimeString + " | " + message);
+                sw.WriteLine(curDateString + " " + curTimeString + " | " + message);
             }
 
             //Done here
