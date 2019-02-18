@@ -40,6 +40,7 @@ namespace LogDLL
 			}
 	
 			//Construct the path
+			string curDateString1 = DateTime.Now.ToString("yyyy-MM-dd");
 			if (originalInput.IndexOf(':') < firstTilda && originalInput.IndexOf(':') != -1)
 			{
 				//Using a Custom Path
@@ -50,7 +51,7 @@ namespace LogDLL
 					output.Append(defaultError + "Path can not be empty.");
 					return;
 				}
-				string endPath = "\\" + fileName + "\\";
+				string endPath = "\\" + curDateString1 + "\\";
 				path = origPath + endPath;
 			}
 			else
@@ -64,7 +65,7 @@ namespace LogDLL
 					return;
 				}
 				origPath = AppDomain.CurrentDomain.BaseDirectory;
-				string endPath = folderName + "\\" + fileName + "\\";
+				string endPath = folderName + "\\" + curDateString1 + "\\";
 				path = origPath + endPath;
 	
 			}
